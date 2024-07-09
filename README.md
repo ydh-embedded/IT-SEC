@@ -29,6 +29,6 @@ __________________________________________________________________________
 
 __________________________________________________________________________
 ### Telegram-Bot (Issue für Incedent Management)
-- https://github.com/ydh-embedded/IT-SEC/blob/main/PDF/2024-07-09%23Kill-Switch.pdf
+- https://github.com/ydh-embedded/IT-SEC/blob/main/PDF/2024-07-09%23Telegram-Group-Integration.pdf
 
 __________________________________________________________________________

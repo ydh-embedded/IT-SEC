@@ -9,7 +9,7 @@ def send_message(chat_id, message):
     requests.post(url, json=data)
 
 def main():
-    chat_id = "YOUR_CHAT_ID"
+    chat_id = "1501637981"
     message = "Hello from IssueTrackerBot!"
     send_message(chat_id, message)
 

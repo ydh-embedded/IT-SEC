@@ -3,10 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
-    <script src="config.js"></script>
+    <meta http-equiv="X-UA-Comatible" content="IE=edge">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="/JSON/script.js"></script>
+
+    <title>Telegram_Issue_SEC_Report</title>
+
+    
+
+
+
     <style>
         body {
             background-color: #F7F7F7;
@@ -74,11 +84,7 @@
 
     </style>
 
-    <title>Telegram_SEC_Report_Bot</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="/JSON/script.js"></script>
+
 
 </head>
 
@@ -159,15 +165,19 @@
 
             <form onsubmit="scheduleMessage(); return false;">
                 
-                <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="textMessage">
-                    <label class="mdl-textfield__label" for="textMessage">Text-Messages...</label>
+                <div class="mdl-card__supporting-text">
+
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="textMessage">
+                        <label class="mdl-textfield__label" for="textMessage">Text-Messages...</label>
+                    </div>
+            
+                    <!-- Accent-colored raised button -->
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                        Absenden
+                    </button>
+
                 </div>
-        
-                <!-- Accent-colored raised button -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-                    Absenden
-                </button>
         
         
             </form>

@@ -11,7 +11,6 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
     <script src="/python/script.py"></script>
-
     <title>Telegram_Issue_SEC_Report</title>
 
     
@@ -20,33 +19,126 @@
 
     <style>
         body {
-            background-color: #F7F7F7;
+            background-color: #ffdfdf;
             padding-bottom: 100px;
         }
         
         .container {
             margin: 0px 100px !important;
+            background-color: #f7f7f7a7;
+
+
         }
         
         .demo-list-action {
             width: 300px;
         }
+
+
+        
+        h1 {
+            font-size: 7lvw !important;
+            font-weight: 500 !important;
+            color: rgb(134, 0, 74);
+            margin: 0 0 !important;
+        }
         
         h2 {
-            font-size: 24px !important;
+            font-size: 3lvw !important;
             font-weight: 500 !important;
             color: rgba(0, 0, 0, .54);
+            margin: 0 0 !important;
+        }
+        
+        h4 {
+            font-size: 1.6lvw !important;
+            font-weight: 300 !important;
+            color: rgba(134, 0, 74, 0.534);
             margin: 0 0 !important;
         }
         
         .mdl-card {
             padding: 8px;
             width: 100% !important;
+            display: flex;
+            border-radius: 2rem;
+
         }
         
+        .button-card {
+            display: flex;
+            width: 300px;
+            padding: 8px;
+            background: #ffeaea;
+            border-radius: 0.5rem;
+            align-items: stretch;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        
+        .date-card {
+            display: flex;
+            width: 300px;
+            height: 222px;
+            margin-top: 11px;
+            margin-bottom: 11px;
+            padding: 8px;
+            background: #ffeaea;
+            border-radius: 0.5rem;
+            align-items: stretch;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        
+        
+        .mdl-textfield {
+                         
+                    height: 300px;
+        }
+        
+        
+        .mdl-button {
+            color: #F7F7F7;
+            min-block-size: 44px;
+            min-width: min-content;
+            min-height: min-content;
+            padding-block: 2px;
+            font-size: max(11px , 1.4lvw);
+        }
+        
+        .mdl-dropdown {
+            padding: 8px;
+            width: 100% !important;
+            background-color: none;
+            
+            
+            position: relative;
+            font-size: 16px;
+            display: inline-block;
+            display: block;
+            box-sizing: border-box;
+            width: 300px;
+            max-width: 300px;
+            margin: 0;
+            padding: 20px 0;
+            
+        }
+
+
+
+
         .row {
             display: flex;
             align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .column {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
             justify-content: space-between;
         }
         
@@ -81,6 +173,13 @@
             background: #fafafa;
             position: relative;
         }
+          
+        form {
+            padding: 20px;
+            position: relative;
+            border-radius: 2rem;
+        }
+
 
 
     </style>
@@ -89,13 +188,22 @@
 
 </head>
 
-<body onload="init()">
-    <div class="container">
-        <h1>Secruity_Issue_Report</h1>
-        <div class="mdl-card mdl-shadow--2dp margin-bottom-100" id="next-message">
-            <h2>Nächste Nachricht</h2>
-            <div id="scheduled-message"></div>
 
+
+<body onload="init()">
+
+    <div class="container">
+        
+
+
+        <div class="mdl-card mdl-shadow--2dp margin-bottom-100" id="next-message">
+            <div  class="row">
+                <h4>Gruppenname</h4>
+                <h1>Secruity - Report</h1>
+            </div>
+            
+            
+            <div id="scheduled-message"></div>
         </div>
 
 
@@ -104,38 +212,55 @@
 
 
         <div class="mdl-card mdl-shadow--2dp margin-bottom-100">
-            <h2>Vorlagen</h2>
+            
+            <div  class="row">
+                <h4>Text-Nachricht</h4>
+            </div>
 
             <form onsubmit="addTemplate(); return false;">
 
-
                 <div class="row">
-
-
-
-
+                    
+                    
+                    
+                    
                     <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="text" id="template">
                         <label class="mdl-textfield__label" for="sample1">Text...</label>
                     </div>
-
-
-
-
-
-
-
-                    <div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div name="dropdown" id="dropdown" class="mdl-dropdown">
                         <select name="Typ" id="type" class="mdl-textfield__input">
-                            <option value="1">Gute Nacht</option>
-                            <option value="2">Anwort</option>
+                            <option value="1">Buchhaltung und Finanzen</option>
+                            <option value="2">Forschung und Entwicklung</option>
+                            <option value="3">Geschäftsleitung</option>
+                            <option value="4">IT und EDV</option>
+                            <option value="5">Kundendienst</option>
+                            <option value="6">Marketing</option>
+                            <option value="7">Personalwesen</option>
+                            <option value="8">Produktion</option>
+                            <option value="9">Vertrieb</option>
                         </select>
                     </div>
+                    
+                    
+                    
+                    <div name="button-card" id="button-card" class="button-card">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Hinzufügen</button>
+                    </div>
+                    
 
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Hinzufügen</button>
+
                 </div>
             </form>
-
+            
+            <!-- Simple Textfield -->
             <div class="row align-start">
                 <div class="demo-list-action mdl-list" id="templateList1">
 
@@ -147,14 +272,22 @@
             </div>
 
             <div class="row">
-                <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="date" id="date">
+                <div class="date-card">
+                    
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="date" id="date">
+                    </div>
                 </div>
-                <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="time" id="time">
+                
+                <div class="date-card">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="time" id="time">
+                    </div>
                 </div>
 
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="start()">  Start</button>
+            
+            
             </div>
         </div>
 

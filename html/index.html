@@ -18,9 +18,18 @@
 
 
     <style>
+        
         body {
-            background-color: #ffdfdf;
+            padding: 20px;
+            background: #fafafa;
+            position: relative;
             padding-bottom: 100px;
+        }
+          
+        form {
+            padding: 20px;
+            position: relative;
+            border-radius: 2rem;
         }
         
         .container {
@@ -37,21 +46,21 @@
 
         
         h1 {
-            font-size: 7lvw !important;
+            font-size: calc(32px, 1.5lvm) !important;
             font-weight: 500 !important;
             color: rgb(134, 0, 74);
             margin: 0 0 !important;
         }
         
         h2 {
-            font-size: 3lvw !important;
+            font-size: calc(22px, 1.5lvm) !important;
             font-weight: 500 !important;
             color: rgba(0, 0, 0, .54);
             margin: 0 0 !important;
         }
         
         h4 {
-            font-size: 1.6lvw !important;
+            font-size: calc(12px, 1.5lvm) !important;
             font-weight: 300 !important;
             color: rgba(134, 0, 74, 0.534);
             margin: 0 0 !important;
@@ -69,7 +78,7 @@
             display: flex;
             width: 300px;
             padding: 8px;
-            background: #ffeaea;
+            background: #fafafa;
             border-radius: 0.5rem;
             align-items: stretch;
             flex-direction: column;
@@ -84,7 +93,7 @@
             margin-top: 11px;
             margin-bottom: 11px;
             padding: 8px;
-            background: #ffeaea;
+            background: #fafafa;
             border-radius: 0.5rem;
             align-items: stretch;
             flex-direction: column;
@@ -105,7 +114,7 @@
             min-width: min-content;
             min-height: min-content;
             padding-block: 2px;
-            font-size: max(11px , 1.4lvw);
+            font-size: max(22px , 1.1lvw);
         }
         
         .mdl-dropdown {
@@ -126,15 +135,13 @@
             
         }
 
-
-
-
         .row {
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: space-between;
         }
+
         .column {
             display: flex;
             align-items: center;
@@ -158,6 +165,7 @@
         .demo-card-wide.mdl-card {
             width: 512px;
         }
+
         .demo-card-wide > .mdl-card__title {
             color: #fff;
             height: 176px;
@@ -167,18 +175,7 @@
         .demo-card-wide > .mdl-card__menu {
             color: #fff;
         }
-          
-        body {
-            padding: 20px;
-            background: #fafafa;
-            position: relative;
-        }
-          
-        form {
-            padding: 20px;
-            position: relative;
-            border-radius: 2rem;
-        }
+
 
 
 
@@ -220,21 +217,7 @@
             <form onsubmit="addTemplate(); return false;">
 
                 <div class="row">
-                    
-                    
-                    
-                    
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="template">
-                        <label class="mdl-textfield__label" for="sample1">Text...</label>
-                    </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                    <!-- Dropdown Menu -->
                     <div name="dropdown" id="dropdown" class="mdl-dropdown">
                         <select name="Typ" id="type" class="mdl-textfield__input">
                             <option value="1">Buchhaltung und Finanzen</option>
@@ -248,27 +231,31 @@
                             <option value="9">Vertrieb</option>
                         </select>
                     </div>
+
+                    <!-- Textfeld -->
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="template">
+                        <label class="mdl-textfield__label" for="sample1">Text...</label>
+                    </div>
                     
-                    
-                    
+                                        
+                    <!-- Button -->
                     <div name="button-card" id="button-card" class="button-card">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Hinzufügen</button>
                     </div>
-                    
-
 
                 </div>
             </form>
             
             <!-- Simple Textfield -->
-            <div class="row align-start">
+            <div class="row">
+             <div class="row align-start">
                 <div class="demo-list-action mdl-list" id="templateList1">
-
                 </div>
 
                 <div class="demo-list-action mdl-list" id="templateList2">
-
                 </div>
+             </div>
             </div>
 
             <div class="row">
@@ -284,8 +271,11 @@
                         <input class="mdl-textfield__input" type="time" id="time">
                     </div>
                 </div>
-
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="start()">  Start</button>
+                
+                <!-- Button START -->
+                <div name="button-card" id="button-card" class="button-card">
+                    <button class="mdl-button button-card mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="start()">Start</button>
+                </div>
             
             
             </div>

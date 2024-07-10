@@ -22,11 +22,13 @@ x: int = 10 + 10
 log.info('The answer is: %s' , x)
 log.info(f'The answer is: {x}')
 
-#SECTION - format
 #LINK - https://docs.python.org/3/library/logging.html#logrecord-attributes
+#SECTION - format
 log.basicConfig(format='%(levelname)s (%(asctime)s): %(message)s (Line: %(Lineno)d [%(filename)s])'  ,
                 datefmt= '%d/%m/%Y %I:%M:%S: %p',
                 level=log.DEBUG)
 
 log.info('Hello, my name is Slim Shady!')
 log.warning('Warning, you caught me!')
+
+

@@ -15,12 +15,13 @@ log_file = os.path.join(log_dir, 'my_logs.log')
 log.basicConfig(filename=log_file, 
                 encoding='utf-8', 
                 filemode='w', 
-                level=log.DEBUG)
+                level=log.DEBUG ,
+                #filename='my_logs.log' , 
+                #filemode='w'
+                )
 
 log.debug('DEBUG')
 log.info('INFO')
 log.warning('WARNING')
 log.error('ERROR')
 log.critical('CRITICAL')
-
-

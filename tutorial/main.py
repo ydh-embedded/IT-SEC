@@ -1,5 +1,6 @@
 import logging as log
 import os
+import other_module
 
 log.basicConfig(level=log.DEBUG)
 
@@ -30,5 +31,3 @@ log.basicConfig(format='%(levelname)s (%(asctime)s): %(message)s (Line: %(Lineno
 
 log.info('Hello, my name is Slim Shady!')
 log.warning('Warning, you caught me!')
-
-

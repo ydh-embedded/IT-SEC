@@ -74,6 +74,7 @@ def handle_response(text: str) = str:
             print(f'Update {update} caused error {context.error}')
             
             __name__ == '__main__'
+            print ('starting bot ... ')
             app = Application.builder().token(TOKEN).build()
             
             #SECTION - Commands
@@ -83,4 +84,14 @@ def handle_response(text: str) = str:
             
             
             #SECTION - Messages
+            app.add_handler(MessageHandler(filters.TEXT, handle_message))
+            
+            
+            #SECTION - Errors
+            app.add_error_handler(error)
+            
+            
+            #SECTION - Polling
+            print('Polling...')
+            app.run_polling(poll_interval=3)
             

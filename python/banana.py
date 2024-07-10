@@ -73,3 +73,14 @@ def handle_response(text: str) = str:
         async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
             print(f'Update {update} caused error {context.error}')
             
+            __name__ == '__main__'
+            app = Application.builder().token(TOKEN).build()
+            
+            #SECTION - Commands
+            app.add_handler(CommandHandler('start', start_command))
+            app.add_handler(CommandHandler('help', help_command))
+            app.add_handler(CommandHandler('custom', custom_command))
+            
+            
+            #SECTION - Messages
+            
